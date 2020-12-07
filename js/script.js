@@ -1,6 +1,6 @@
 const headerScroll = () => {
 	const header = document.querySelector('.header');
-	if (window.pageYOffset > 80) {
+	if (window.pageYOffset > 40) {
 		header.classList.add('fixed');
 	} else {
 		header.classList.remove('fixed');
@@ -113,25 +113,24 @@ if (animItems.length > 0) {
 if (document.querySelectorAll('.slider-partners').length > 0) {
 	$(function () {
 		$('.slider-partners').slick({
-			arrows: false,
+			arrows: true,
 			dots: false,
 			autoplay: true,
 			variableWidth: true,
-			centerMode: true,
-			slidesToShow: 5,
+			slidesToShow: 4,
+			prevArrow: $('.slider__arrow-partners--left'),
+			nextArrow: $('.slider__arrow-partners--right'),
 			responsive: [
 				{
 					breakpoint: 769,
 					settings: {
-						centerMode: true,
 						slidesToShow: 5,
 					}
 				},
 				{
 					breakpoint: 376,
 					settings: {
-						centerMode: true,
-						centerPadding: '-40px',
+						centerMode:true,
 						slidesToShow: 1,
 					}
 				},
@@ -541,7 +540,7 @@ document.addEventListener('keydown', (e) => {
 
 // =========================================================Tabs=============================================================
 if (document.querySelector('.tabs')) {
-	const	tabsProduct = document.querySelectorAll('.tabcontent-product__block'),
+	const tabsProduct = document.querySelectorAll('.tabcontent-product__block'),
 		  tabsNav = document.querySelectorAll('.tabnav-product__item');
 		  
 		  tabsNav.forEach(item => {
