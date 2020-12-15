@@ -132,13 +132,14 @@ if (document.querySelectorAll('.slider-exhibitions').length > 0) {
 			dots: false,
 			autoplay: true,
 			slidesToShow: 4,
-			variableWidth: true,
+			
 			responsive: [
 				{
-					breakpoint: 1740,
+					breakpoint: 1400,
 					settings: {
 						slidesToShow: 3,
-						variableWidth: false
+						variableWidth: false,
+						
 					}
 				},
 				{
@@ -149,7 +150,7 @@ if (document.querySelectorAll('.slider-exhibitions').length > 0) {
 					}
 				},
 				{
-					breakpoint: 560,
+					breakpoint: 520,
 					settings: {
 						slidesToShow: 1,
 						variableWidth: false,
@@ -442,3 +443,28 @@ if (document.querySelector('.tabs')) {
 			  });
 		  });
   }
+
+// =========================================================Spoils=============================================================
+
+if (document.querySelectorAll('.staps-spoil').length > 0) {
+	const spoils = document.querySelectorAll('.staps-spoil');
+	for (spoil of spoils) {
+		const spoilHeader = spoil.querySelector('.staps-spoil__header'),
+		spoilbody = spoil.querySelector('.staps-spoil__body'),
+		spoilClose = spoil.querySelector('.staps-spoil__header-btn');
+		if (!spoilbody.hasChildNodes()) {
+			spoilClose.style.display = 'none';
+		} else {
+			spoilClose.style.display = 'block';
+		}
+		spoil.addEventListener('click', () => {
+			spoilHeader.classList.toggle('active');
+			if (!spoilbody.hasChildNodes()) {
+				spoilbody.style.display = 'none';
+				spoilHeader.classList.remove('active');
+			} else {
+				$(spoilbody).slideToggle();
+			}
+		});
+	}
+}
