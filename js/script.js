@@ -444,7 +444,7 @@ if (document.querySelector('.tabs')) {
 		  });
   }
 
-// =========================================================Spoils=============================================================
+//========================================================Spoils=============================================================
 
 if (document.querySelectorAll('.staps-spoil').length > 0) {
 	const spoils = document.querySelectorAll('.staps-spoil');
@@ -454,6 +454,8 @@ if (document.querySelectorAll('.staps-spoil').length > 0) {
 		spoilClose = spoil.querySelector('.staps-spoil__header-btn');
 		if (!spoilbody.hasChildNodes()) {
 			spoilClose.style.display = 'none';
+			spoilbody.style.display = 'none';
+			spoilHeader.classList.remove('active');
 		} else {
 			spoilClose.style.display = 'block';
 		}
@@ -466,5 +468,26 @@ if (document.querySelectorAll('.staps-spoil').length > 0) {
 				$(spoilbody).slideToggle();
 			}
 		});
+	}
+}
+
+//=========================================================readMore==========================================================
+
+const moreBtns = document.querySelectorAll('.works-author__more'),
+	  moreCards = document.querySelectorAll('.works-author__card'),
+      moreTexts = document.querySelectorAll('.works-author__text');
+
+const readMore = (moreCard) => {
+	const moreCardBtn = moreCard.querySelector('.works-author__more'),
+	      moreCardText = moreCard.querySelector('.works-author__text');
+	
+	moreCardBtn.addEventListener('click', () => {
+		moreCardText.classList.toggle('active');
+	});
+};
+
+if (moreBtns.length > 0) {
+	for (moreCard of moreCards) {
+		readMore(moreCard);
 	}
 }
