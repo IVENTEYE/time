@@ -87,6 +87,7 @@ if (document.querySelectorAll('.slider-partners').length > 0) {
 			dots: false,
 			autoplay: true,
 			variableWidth: true,
+			infinite: false,
 			slidesToShow: 4,
 			prevArrow: $('.slider__arrow-partners--left'),
 			nextArrow: $('.slider__arrow-partners--right'),
