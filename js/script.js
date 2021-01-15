@@ -308,9 +308,7 @@ if (document.querySelectorAll('.page__video-slider').length > 0) {
 	}
 }());
 
-$(document).ready(() => {
-
-    const popupLinks = document.querySelectorAll('.popup-link[href^="#"]'),
+const popupLinks = document.querySelectorAll('.popup-link'),
       body = document.querySelector('body'),
       lockPadding = document.querySelectorAll('.lock-padding'), // для фиксированных обьектов
       timeout = 800;
@@ -405,14 +403,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-});
-
-
-
-
-
-
-
 (function () {
     //проверяем поддержку
     if (Element.prototype.closest) {
@@ -439,7 +429,7 @@ document.addEventListener('keydown', (e) => {
 // =========================================================Tabs=============================================================
 if (document.querySelector('.tabs')) {
 	const tabsProduct = document.querySelectorAll('.tabcontent-product__block'),
-		  tabsNav = document.querySelectorAll('.tabnav-product__item[data-href]');
+		  tabsNav = document.querySelectorAll('.tabnav-product__item');
 		  
 		  tabsNav.forEach(item => {
 			  item.addEventListener('click', function (e) {
