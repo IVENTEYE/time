@@ -1764,6 +1764,10 @@ body.lock {
 .page__conditions-list li:last-child {
     margin-bottom: 0;
 }
+.slider-partners__item img {
+    max-width: 365px;
+    max-height: 118px;
+}
 .block-requirementes {
     margin-left: 66px;
 }
