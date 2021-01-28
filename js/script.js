@@ -85,9 +85,9 @@ if (document.querySelectorAll('.slider-partners').length > 0) {
 		$('.slider-partners').slick({
 			arrows: true,
 			dots: false,
-			autoplay: true,
 			variableWidth: true,
-			infinite: false,
+			infinite: true,
+			autoplay: true,
 			slidesToShow: 4,
 			prevArrow: $('.slider__arrow-partners--left'),
 			nextArrow: $('.slider__arrow-partners--right'),
