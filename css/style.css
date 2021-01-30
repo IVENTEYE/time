@@ -1742,7 +1742,7 @@ body.lock {
     margin-bottom: 15px;
 }
 .page__conditions-container {
-    max-width: 1000px;
+    max-width: 525px;
 }
 .page__conditions-header {
     background-color: #d8d8d8;
@@ -3947,6 +3947,9 @@ body.lock {
     .page__video-image iframe {
         height: 222px;
     }
+    .body-places__item span {
+        white-space: nowrap;
+    }
 }
 @media (max-width: 400px) {
     .header__sign {
@@ -5336,6 +5339,9 @@ body.lock {
     }
     .page__video-image iframe {
         height: 222px;
+    }
+    .body-places__item span {
+        white-space: nowrap;
     }
 }
 @media (max-width: 400px) {
